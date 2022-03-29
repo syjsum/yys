@@ -1,0 +1,82 @@
+.nav {
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    /* 背景图片不平铺  位置我是水平居中垂直居上 */
+    background: url("../images/nav_back_bg_fd2505e.jpg") no-repeat center top;
+}
+
+/* 水平居中的容器  不设置高度 高度由内容撑开 因为整个页面水平居中使用同一个class */
+.wrap {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.nav li {
+    float: left;
+    width: 84.2px;
+    height: 70px;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav span {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.nav li:hover>a {
+    color: #000;
+}
+
+.active {
+    background: url("../images/nav_bg1_d44f09d.jpg") no-repeat;
+}
+
+.active>a {
+    color: #000;
+}
+
+.active span {
+    color: #c2a060;
+}
+
+.nav li:hover {
+    background: url("../images/nav_bg1_d44f09d.jpg") no-repeat;
+}
+
+.nav li:hover span {
+    color: #c2a060;
+}
+
+/* 下拉列表 */
+/* 
+核心思路：
+1）下拉列表绝对定位
+2）合适的父元素相对定位
+3）下拉列表display:none;隐藏
+4）鼠标悬停时下拉列表display:block;显示
+*/
+.nav-list {
+    z-index: 666;
+    /* 隐藏 */
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 140px;
+    background: url("../images/subnav_bg_5cc9309.jpg") no-repeat center 0;
+}
+
+.nav li:hover>.nav-list {
+    /* 显示 */
+    display: block;
+}
